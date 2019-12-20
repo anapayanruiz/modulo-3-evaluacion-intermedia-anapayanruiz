@@ -4,11 +4,11 @@ function Pokemon(props) {
   console.log(props.pokemon.types);
   const types = props.pokemon.types;
   return (
-    <li className="border--medium">
+    <li className=" card border--medium">
       <img src={props.pokemon.url} />
-      <h2>{props.pokemon.name}</h2>
+      <h2 className="card__title">{props.pokemon.name}</h2>
       <ul>{types.map((type, index) => {
-        return <li
+        return <li className="card__btn"
           key={index}
         >{type}
         </li>

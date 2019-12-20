@@ -1,6 +1,7 @@
 import React from 'react';
 import apiData from '../api/data.json';
 import '../stylesheets/App.css';
+import Header from './Header';
 import PokeList from './PokeList';
 import Pokemon from './Pokemon.js';
 
@@ -14,8 +15,8 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
-        <h1>Mi lista de pokemon</h1>
+      <div>
+        <Header title="Mi lista de pokemon" />
         <PokeList />
         {this.state.pokemons.map((pokemon, index) => {
           return <Pokemon
