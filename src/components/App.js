@@ -9,7 +9,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      pokemons: apiData
+      pokemons: apiData,
     };
   }
 
@@ -23,6 +23,8 @@ class App extends React.Component {
             return <Pokemon
               key={index}
               pokemon={pokemon}
+              title="No hay resultados"
+              emptyListMessage="No hay resultados"
             />
           })}
           <PokeList />

@@ -9,19 +9,30 @@ String.prototype.capitalize = function () {
 function Pokemon(props) {
   const types = props.pokemon.types;
   const name = props.pokemon.name;
-  return (
-    <li className=" card border--medium">
-      <img src={props.pokemon.url} alt={name} />
-      <h2 className="card__title">{name.capitalize()}</h2>
-      <ul>{types.map((type, index) => {
-        return <li className="card__btn"
-          key={index}
-        >{type.toUpperCase()}
-        </li>
-      })}
-      </ul>
-    </li>
-  )
+  const url = props.pokemon.url;
+  if (props.pokemon.length === 0) {
+    return (
+      <div>
+        <h2 className="title--medium">{props.title}</h2>
+        <p className="text">{props.emptyListMessage}</p>
+      </div>
+    );
+  } else {
+    return (
+      <li className=" card border--medium">
+        <img src={url} alt={name} />
+        <h2 className="card__title">{name.capitalize()}</h2>
+        <ul>{types.map((type, index) => {
+          return <li className="card__btn"
+            key={index}
+          >{type.toUpperCase()}
+          </li>
+        })}
+        </ul>
+      </li>
+    )
+  }
+
 }
 
 export default Pokemon;
