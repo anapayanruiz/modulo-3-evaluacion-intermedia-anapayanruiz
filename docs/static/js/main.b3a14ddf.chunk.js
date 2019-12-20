@@ -1,0 +1,2 @@
+(this["webpackJsonpevaluacion-intermedia"]=this["webpackJsonpevaluacion-intermedia"]||[]).push([[0],[,,,function(e,n,t){e.exports=t(10)},,,,,function(e,n,t){},function(e,n,t){},function(e,n,t){"use strict";t.r(n);var a=t(0),i=t.n(a),c=t(2),r=t.n(c);t(8),t(9);var o=function(){return i.a.createElement("div",{className:"App"},i.a.createElement("h1",null,"holi"))};r.a.render(i.a.createElement(o,null),document.getElementById("root"))}],[[3,1,2]]]);
+//# sourceMappingURL=main.b3a14ddf.chunk.js.map
