@@ -17,15 +17,17 @@ class App extends React.Component {
     return (
       <div>
         <Header title="Mi lista de pokemon" />
-        <PokeList />
-        {this.state.pokemons.map((pokemon, index) => {
-          return <Pokemon
-            key={index}
-            pokemon={pokemon}
-          />
-        })}
-        <PokeList />
-      </div>
+        <div className="cards">
+          <PokeList />
+          {this.state.pokemons.map((pokemon, index) => {
+            return <Pokemon
+              key={index}
+              pokemon={pokemon}
+            />
+          })}
+          <PokeList />
+        </div>
+      </div >
     );
   }
 }
