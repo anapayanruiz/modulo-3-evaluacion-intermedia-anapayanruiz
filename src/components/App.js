@@ -15,18 +15,22 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="page">
         <Header title="Mi lista de pokemon" />
         <div className="cards">
           <PokeList />
-          {this.state.pokemons.map((pokemon, index) => {
-            return <Pokemon
-              key={index}
-              pokemon={pokemon}
-              title="No hay resultados"
-              emptyListMessage="No hay resultados"
-            />
-          })}
+          {this.state.pokemons.length === 0
+            ?
+            <div>
+              <h2 className="title--medium">No hay resultados</h2>
+            </div>
+            :
+            this.state.pokemons.map(pokemon =>
+              <Pokemon
+                key={pokemon.id}
+                pokemon={pokemon}
+              />
+            )}
           <PokeList />
         </div>
       </div >
